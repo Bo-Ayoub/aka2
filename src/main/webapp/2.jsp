@@ -20,17 +20,17 @@
 int x=(int)session.getAttribute("score");
 session.setAttribute("score",x+1);
 %>
-<strong>Correct Answer!</strong>
+<strong style="color:green;">Correct Answer!</strong>
 <%}else{ %>
-<strong>Wrong Answer!</strong>
+<strong style="color:red;">Wrong Answer!</strong>
 <%} %>
-</div>
-<div>
-<form action="Question.jsp" method="post">
-<input type="submit" class="btn btn-secondary" name="start" id="start" value="Next Question" style="font-size:30px;">
-</form>
-</div>
-</div>
+ <script>
+            // Wait for 3000 milliseconds (3 seconds) and then redirect
+            setTimeout(function () {
+                // Redirect to Question.jsp with the start parameter set to "New Question"
+                window.location.href = "Question.jsp?start=New Question";
+            }, 1000);
+        </script>
 
 <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
