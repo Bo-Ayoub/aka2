@@ -49,4 +49,24 @@
     <servlet-name>submitQuestion</servlet-name>
     <url-pattern>/submitQuestion</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>takeQuiz</display-name>
+    <servlet-name>takeQuiz</servlet-name>
+    <servlet-class>servlets.takeQuiz</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>takeQuiz</servlet-name>
+    <url-pattern>/takeQuiz</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>startQuiz</display-name>
+    <servlet-name>startQuiz</servlet-name>
+    <servlet-class>servlets.startQuiz</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>startQuiz</servlet-name>
+    <url-pattern>/startQuiz</url-pattern>
+  </servlet-mapping>
 </web-app>

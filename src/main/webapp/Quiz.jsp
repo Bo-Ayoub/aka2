@@ -280,7 +280,7 @@
         <h5 class="card-title">Mathematics Quiz</h5>
         <p class="card-text">Take Mathematics Quiz to test and sharpen your algebra, arithmetic, geometry and 
         other mathematical concepts.</p>
-        <a href="Maths_Exam.jsp" class="btn btn-primary">Take Quiz</a>
+        <a href="takeQuiz?type=math" class="btn btn-primary">Take Quiz</a>
       </div>
     </div>
 
@@ -291,7 +291,7 @@
         <h5 class="card-title">Physics Quiz</h5>
         <p class="card-text">Take Mathematics Quiz to test and sharpen your algebra, arithmetic, geometry and 
         other mathematical concepts.</p>
-        <a href="Physics_Exam.jsp" class="btn btn-primary">Take Quiz</a>
+        <a href="takeQuiz?type=physics" class="btn btn-primary">Take Quiz</a>
       </div>
     </div>
     
@@ -301,7 +301,7 @@
       <div class="card-body">
         <h5 class="card-title">Submit Quiz Questions</h5>
         <p class="card-text">Submit some Quiz Questions which will be reviewed by your teachers and added soon to the Question database for Quiz.</p>
-        <a href="Submit_Quiz.jsp" class="btn btn-primary">Submit Questions</a>
+        <a href="submitQuestion" class="btn btn-primary">Submit Questions</a>
       </div>
     </div>
     
