@@ -33,16 +33,18 @@
         x.style.color="rgb(54,151,233)";
         }
       }
-      function myfunc3(str)
-      {
-        if(flag==0)
-        {
-        var x=document.getElementById(str);
-        flag=1;
-        var y=str.charCodeAt(0)-97;
-        location.href=y+".jsp";
-        }
-      }
+   
+      function myfunc3(str) {
+    	    if (flag == 0) {
+    	        var x = document.getElementById(str);
+    	        flag = 1;
+    	        var y = str.charCodeAt(0) - 97;
+    	         location.href=y+".jsp";
+    	        //location.href = "QuizCorr?id=" + y;
+    	    }
+    	}
+
+      
     </script>
 
     
@@ -119,6 +121,8 @@
 		    {
 		    	clearInterval(countdown);
 		    	location.href="noans.jsp";
+		    	//int y=-1;
+		    	//  location.href="QuizCorr?id="+y;
 		    }
 		}, 1000);
 	</script>

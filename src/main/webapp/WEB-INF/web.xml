@@ -69,4 +69,14 @@
     <servlet-name>startQuiz</servlet-name>
     <url-pattern>/startQuiz</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>QuizCorr</display-name>
+    <servlet-name>QuizCorr</servlet-name>
+    <servlet-class>servlets.QuizCorr</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>QuizCorr</servlet-name>
+    <url-pattern>/QuizCorr</url-pattern>
+  </servlet-mapping>
 </web-app>
