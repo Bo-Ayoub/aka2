@@ -6,12 +6,12 @@ import java.sql.*;
 public class SubmitQuiz
 {
 	
-	public static boolean saveData(int srno,String question,String a,String b,String c,String d,int ans)
+	public static boolean saveData(int idCat,String question,String a,String b,String c,String d,int ans)
 	{
 		try(Connection conn=Connect.createConnection())
 		{
 			Statement  stmt = conn.createStatement();
-			stmt.executeUpdate("INSERT INTO maths_ques values("+srno+",'"+question+"','"+a+"','"+b+"','"+c+"','"+d+"',"+ans+")");
+			stmt.executeUpdate("INSERT INTO question values(null,'"+question+"','"+a+"','"+b+"','"+c+"','"+d+"',"+ans+","+idCat+")");
 			return true;
 		}
 		catch(Exception e)
@@ -20,7 +20,7 @@ public class SubmitQuiz
 		}
 	}
 
-	public static int getMaxSrNo()
+	/*public static int getMaxSrNo()
 	{
 		try(Connection conn=Connect.createConnection())
 		{
@@ -39,5 +39,6 @@ public class SubmitQuiz
 		{
 			return 0;
 		}
-	}
+	}*/
+	
 }

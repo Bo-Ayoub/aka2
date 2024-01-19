@@ -40,25 +40,25 @@ public class CreateAcc extends HttpServlet {
             throws ServletException, IOException {
         HttpSession session = request.getSession();
 
-        String univ = "DCRUST, Murthal";
+        String univ = request.getParameter("univ");
         String name = request.getParameter("name");
-        String roll = request.getParameter("roll");
+    //    String roll = request.getParameter("roll");
         String degree = request.getParameter("degree");
         String email = request.getParameter("email");
         String password = request.getParameter("password");
         String cpassword = request.getParameter("confirmpassword");
-        String[] cb = request.getParameterValues("cb");
+     //   String[] cb = request.getParameterValues("cb");
 
-        try {
+    /*    try {
             long rollno = Long.parseLong(roll);
         } catch (Exception e) {
             setErrorMessage(session, "Roll No. can only contain Numeric Data.");
             response.sendRedirect("Home.jsp");
             return;
-        }
+        }*/
 
         // Checking Constraints
-        if (roll == "" || email == "" || name == "" || password == "" || cpassword == "" || degree == "") {
+        if ( email == "" || name == "" || password == "" || cpassword == "" || degree == "") {
             setErrorMessage(session, "Please fill all the fields of the form.");
             response.sendRedirect("Home.jsp");
         } else if (password.length() < 5 || password.length() > 20) {
@@ -67,9 +67,7 @@ public class CreateAcc extends HttpServlet {
         } else if (!password.equals(cpassword)) {
             setErrorMessage(session, "Confirm Password didn't match. Please try again.");
             response.sendRedirect("Home.jsp");
-        } else if (roll.length() > 20 || roll.length() < 5) {
-            setErrorMessage(session, "Your University Roll No must be 5 to 20 digits long.");
-            response.sendRedirect("Home.jsp");
+        
         } else if (name.length() > 40) {
             setErrorMessage(session, "Your Name can be of maximum 40 characters long.");
             response.sendRedirect("Home.jsp");
@@ -80,13 +78,10 @@ public class CreateAcc extends HttpServlet {
             setErrorMessage(session, "Your Name must not contain any digits or special characters.");
             response.sendRedirect("Home.jsp");
         } else {
-            String x = RegisterTable.authenticate(univ, degree, name, roll, email, password);
+            String x = RegisterTable.authenticate(univ, degree,name,email, password);
             if (x.equals("true")) {
                 session.setAttribute("user", email);
                 setSuccessMessage(session, "Registration Successful.");
-                response.sendRedirect("Home.jsp");
-            } else if (x.equals("univroll")) {
-                setErrorMessage(session, "This University Roll No. has already been registered.");
                 response.sendRedirect("Home.jsp");
             } else if (x.equals("email")) {
                 setErrorMessage(session, "This email has already been registered.");

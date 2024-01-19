@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@ page import="aka.categorie" %>
+    <%@ page import="java.util.List" %>
 <!doctype html>
 <html lang="en">
 	<head>
@@ -29,12 +31,19 @@
 	  <h1>Submit Quiz</h1>
 	  <form action="submitQuestion" method="post">
 	  
+	  
+	  <%
+    // Retrieve the categories list from the request attribute
+    List<categorie> categories = (List<categorie>) request.getAttribute("categories");
+%>
 	  <div class="form-group">
-	    <label for="Select0">Select Quiz:</label>
-	    <select class="form-control" id="Select0">
-	      <option>Maths Quiz</option>
-	    </select>
-	  </div>
+        <label for="Select0">Select Quiz:</label>
+        <select class="form-control" id="Select0" name="CategorieId">
+            <% for (categorie category : categories) { %>
+                <option value="<%= category.getId() %>"><%= category.getLibelle() %></option>
+            <% } %>
+        </select>
+    </div>
 	  
 	  <div class="form-group">
 	    <label for="Textarea0">Write Your Question Here:</label>

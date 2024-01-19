@@ -170,7 +170,7 @@ if (alertMessage != null && !alertMessage.isEmpty()) {
                     <div class="form-group">
                       <label for="exampleInputUniv">University Name</label>
                       <input type="text" class="form-control" id="exampleInputUniv" aria-describedby="UnivHelp" 
-                      placeholder="DCRUST, Murthal" name="univ" readonly>
+                       name="univ" placeholder="Enter University Name">
                     </div>
                     
                   	  <div class="form-group">
@@ -196,11 +196,7 @@ if (alertMessage != null && !alertMessage.isEmpty()) {
                       placeholder="Enter Your Name" name="name">
                     </div>
                     
-                    <div class="form-group">
-                      <label for="exampleInputRoll">University Roll No</label>
-                      <input type="text" class="form-control" id="exampleInputRoll" aria-describedby="RollHelp" 
-                      placeholder="Enter Roll No" name="roll">
-                    </div>
+                   
                     
                     <div class="form-group">
                       <label for="exampleInputEmail1">Email address</label>

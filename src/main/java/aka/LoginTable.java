@@ -10,7 +10,7 @@ public class LoginTable {
 			Statement  stmt = conn.createStatement( );
 			if(person.equals("Student"))
 			{
-		    ResultSet  rs =stmt.executeQuery("select * from Stud_Details where Email='"+email+"'and Password='"+password+"'");
+		    ResultSet  rs =stmt.executeQuery("select * from student where Email='"+email+"'and Password='"+password+"'");
 		    if(rs.next())
 			{	
 				return "true";

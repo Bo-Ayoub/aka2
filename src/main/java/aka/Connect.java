@@ -17,7 +17,7 @@ public static Connection createConnection()
 		   System.out.println("Error: unable to load driver class!");
 		   System.exit(1);
 		}			
-	     con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Akademiks","root","");
+	     con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Akademiks2","root","");
 	}
 	catch(SQLException sqe)
 	{

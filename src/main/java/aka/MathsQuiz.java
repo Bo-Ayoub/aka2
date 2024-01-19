@@ -17,7 +17,7 @@ public class MathsQuiz
 		try(Connection conn=Connect.createConnection())
 		{
 			Statement  stmt = conn.createStatement( );
-		    ResultSet  rs =stmt.executeQuery("select max(srno) from maths_ques");
+		    ResultSet  rs =stmt.executeQuery("select max(QuestionId) from question where IdCat=1");
 		    if(rs.next())
 			{	
 				return rs.getInt(1);
@@ -37,7 +37,7 @@ public class MathsQuiz
 		try(Connection conn=Connect.createConnection())
 		{
 			Statement  stmt = conn.createStatement( );
-		    ResultSet  rs =stmt.executeQuery("select * from maths_ques where srno="+srno);
+		    ResultSet  rs =stmt.executeQuery("select * from question where QuestionId="+srno);
 		    if(rs.next())
 			{	
 				question=rs.getString(2);
